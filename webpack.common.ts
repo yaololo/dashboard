@@ -21,24 +21,32 @@ const config: WebpackConfiguration = {
         use: ['style-loader', 'css-loader'],
       },
       {
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      },
+      {
         test: /\.(ts|js)x?$/i,
         exclude: /node_modules/,
-        use: {
-          loader: 'babel-loader',
-          options: {
-            presets: [
-              '@babel/preset-env',
-              '@babel/preset-react',
-              '@babel/preset-typescript',
-            ],
+        use: [
+          {
+            loader: 'babel-loader',
+            options: {
+              presets: [
+                '@babel/preset-env',
+                '@babel/preset-react',
+                '@babel/preset-typescript',
+              ],
+            },
           },
-        },
+        ],
       },
     ],
   },
   resolve: {
     alias: {
-      src: path.resolve(__dirname, 'src'),
+      '~/lib': path.resolve(__dirname, 'src/lib'),
+      '~/component': path.resolve(__dirname, 'src/component'),
+      '~/asset': path.resolve(__dirname, 'src/asset'),
     },
     extensions: ['.tsx', '.ts', '.js'],
   },
@@ -47,6 +55,9 @@ const config: WebpackConfiguration = {
       template: 'src/index.html',
     }),
     new HotModuleReplacementPlugin(),
+    //   new TsconfigPathsPlugin({
+    //     extensions: ['.js', '.jsx', '.json', '.ts', '.tsx']
+    // })
   ],
 }
 
