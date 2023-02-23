@@ -1,6 +1,8 @@
-import { AvatarSize } from './type'
+import { CSSProperties } from 'react'
 
-const getAvatarInnerBoxSize = (size: number) => {
+export const getAvatarInnerBoxSize: (size: number) => CSSProperties = (
+  size,
+) => {
   const dimension = `${size}px`
   const fontSize = `${Math.floor(size / 2)}px`
   return {
@@ -8,20 +10,4 @@ const getAvatarInnerBoxSize = (size: number) => {
     height: dimension,
     fontSize,
   }
-}
-
-export const getStyles = ({
-  style,
-  size,
-}: {
-  style: React.HTMLAttributes<HTMLSpanElement>['style']
-  size: AvatarSize
-}) => {
-  let combinedStyles = style || {}
-
-  if (typeof size === 'number') {
-    combinedStyles = { ...getAvatarInnerBoxSize(size), ...combinedStyles }
-  }
-
-  return combinedStyles
 }

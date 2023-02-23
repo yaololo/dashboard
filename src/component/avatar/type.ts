@@ -5,4 +5,6 @@ export type Props = {
   type?: AvatarType
   size?: 's' | 'm' | 'l'
   icon?: React.ReactNode
+  src?: React.ReactNode
+  alt?: string
 } & React.HTMLAttributes<HTMLSpanElement>
