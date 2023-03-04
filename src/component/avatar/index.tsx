@@ -32,7 +32,9 @@ const Avatar: React.FC<Props> = (props) => {
       className={`avatar ${sizeClassName} avatar-${type}`}
       style={combinedStyle}
     >
-      <span>{children ? children : icon}</span>
+      <span className="flex justify-center align-center">
+        {children ? children : icon}
+      </span>
     </Container>
   )
 }

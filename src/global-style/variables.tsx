@@ -26,3 +26,5 @@ export const themeVariable = css`
 
   --grey-1: rgba(0, 0, 0, 0.25);
 `
+// #34393A#00D3FF#00B7FE#AFB3B9#8D736A
+// #FFBB0F#9AF4EB#F4F5F9#FCCD82#595D57

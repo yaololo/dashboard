@@ -13,7 +13,7 @@ const GlobalStyle = createGlobalStyle`
     scroll-behavior: smooth;
   }
 
-  :before, *:after {
+  *, *:before, *:after {
     box-sizing: inherit;
   }
 
