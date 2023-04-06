@@ -26,7 +26,7 @@ const config: Configuration = merge(common, {
   devServer: {
     static: path.join(__dirname, 'build'),
     historyApiFallback: true,
-    port: 4000,
+    port: 3000,
     headers: {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE, PATCH, OPTIONS',
