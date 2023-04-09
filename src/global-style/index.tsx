@@ -11,6 +11,7 @@ const GlobalStyle = createGlobalStyle`
   html {
     box-sizing: border-box;
     scroll-behavior: smooth;
+    font-size: 10px;
   }
 
   *, *:before, *:after {
@@ -20,8 +21,8 @@ const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     padding: 0;
-    width: 100vw;
-    height: 100vh;
+    overflow: overlay;
+    font-size: 1.6rem;
     overflow: auto;
     background-color: var(--bg-primary);
     input:-webkit-autofill,

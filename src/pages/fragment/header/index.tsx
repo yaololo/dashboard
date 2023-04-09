@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, InnerHeader } from './styles'
+import { Container, InnerHeader } from './style'
 
 import Avatar from '~/component/avatar'
 import ProfileIcon from '~/asset/svg/people.svg'
