@@ -1,0 +1,1 @@
+export const EXPENSE_BASE_PATH = '/expense'
